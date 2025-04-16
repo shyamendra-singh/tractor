@@ -1,0 +1,9 @@
+rear1_controller:
+  type: effort_controllers/JointVelocityController
+  joint: Rear1
+  pid: {p: 100.0, i: 1.0, d: 10.0}
+
+rear2_controller:
+  type: effort_controllers/JointVelocityController
+  joint: Rear2
+  pid: {p: 100.0, i: 1.0, d: 10.0}

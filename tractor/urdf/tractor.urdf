@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tractor">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.275503262308017 0.1134168249371 0.00114102748997771"
+        rpy="0 0 0" />
+      <mass
+        value="3290" />
+      <inertia
+        ixx="1181.50205313415"
+        ixy="62.8690140923481"
+        ixz="-8.30908405189068"
+        iyy="4421.07152572309"
+        iyz="-0.511875110335584"
+        izz="3804.07165064492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.949019607843137 0.909803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="FRONT_L">
+    <inertial>
+      <origin
+        xyz="-0.275503262308017 0.1134168249371 0.00114102748997771"
+        rpy="0 0 0" />
+      <mass
+        value="3290" />
+      <inertia
+        ixx="1181.50205313415"
+        ixy="62.8690140923481"
+        ixz="-8.30908405189068"
+        iyy="4421.07152572309"
+        iyz="-0.511875110335584"
+        izz="3804.07165064492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/FRONT_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/FRONT_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front1"
+    type="continuous">
+    <origin
+      xyz="1.6143 0.81922 -0.13999"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FRONT_L" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="FRONT_R">
+    <inertial>
+      <origin
+        xyz="-0.275503262308017 0.1134168249371 0.00114102748997771"
+        rpy="0 0 0" />
+      <mass
+        value="3290" />
+      <inertia
+        ixx="1181.50205313415"
+        ixy="62.8690140923481"
+        ixz="-8.30908405189068"
+        iyy="4421.07152572309"
+        iyz="-0.511875110335584"
+        izz="3804.07165064492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/FRONT_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/FRONT_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front2"
+    type="continuous">
+    <origin
+      xyz="1.6143 -0.81922 -0.13999"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="FRONT_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="1" />
+  </joint>
+  <link
+    name="REAR_L">
+    <inertial>
+      <origin
+        xyz="-0.275503262308017 0.1134168249371 0.00114102748997771"
+        rpy="0 0 0" />
+      <mass
+        value="3290" />
+      <inertia
+        ixx="1181.50205313415"
+        ixy="62.8690140923481"
+        ixz="-8.30908405189068"
+        iyy="4421.07152572309"
+        iyz="-0.511875110335584"
+        izz="3804.07165064492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/REAR_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/REAR_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear1"
+    type="continuous">
+    <origin
+      xyz="-0.65 0.77 0.055"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="REAR_L" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="REAR_R">
+    <inertial>
+      <origin
+        xyz="-0.275503262308017 0.1134168249371 0.00114102748997771"
+        rpy="0 0 0" />
+      <mass
+        value="3290" />
+      <inertia
+        ixx="1181.50205313415"
+        ixy="62.8690140923481"
+        ixz="-8.30908405189068"
+        iyy="4421.07152572309"
+        iyz="-0.511875110335584"
+        izz="3804.07165064492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/REAR_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/REAR_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear2"
+    type="continuous">
+    <origin
+      xyz="-0.65 -0.77 0.055"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="REAR_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="10"
+      velocity="1" />
+  </joint>
+
+    <!-- Transmissions -->
+  <transmission name="Rear1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="Rear1_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="Rear1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <transmission name="Rear2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="Rear2_motor">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </actuator>
+    <joint name="Rear2">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+  </gazebo>
+  
+</robot>
